@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>选课管理系统</title>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/href.js"></script>
+    <script src="js/mCenter.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/lib/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css"/>
+</head>
+<body>
+<div id="wrap">
+    <div class="leftMeun" id="leftMeun">
+        <div id="logoDiv">
+            <p id="logoP"><span>选课管理系统</span></p>
+        </div>
+        <div id="personInfor">
+            <p id="userName">欢迎您</p>
+            <p>
+                <a id="exit">退出登录</a>
+            </p>
+        </div>
+        <div id="mStudent" class="meun-item"><img src="images/icon_chara_grey.png">学生管理</div>
+        <div id="mCourse" class="meun-item"><img src="images/icon_house_grey.png">课程管理</div>
+        <div id="mType" class="meun-item"><img src="images/icon_card_grey.png">类型管理</div>
+        <div id="mSelect" class="meun-item"><img src="images/icon_user_grey.png">选课管理</div>
+        <div id="mRecord" class="meun-item"><img src="images/icon_source_grey.png">操作记录</div>
+        <div id="mCenter" class="meun-item meun-item-active"><img src="images/icon_change_grey.png">管理员中心</div>
+    </div>
+    <div id="rightContent">
+        <div class="tab-content">
+            <!--管理员管理模块-->
+            <div role="tabpanel" class="tab-pane active">
+                <div class="check-div form-inline">
+                    <div class="col-xs-4 col-lg-4  col-md-5"
+                         style="padding-right: 40px;text-align: right;float: right;">
+                        <label>能否选课:&nbsp;</label>
+                        <label style="margin-right: 10px" id="status">否</label>
+                        <button class="btn btn-white btn-xs " id="start">开始选课</button>
+                        <button class="btn btn-white btn-xs " id="end">结束选课</button>
+                    </div>
+                </div>
+                <div class="data-div">
+                    <div class="row tableHeader">
+                        <div class="col-xs-4">
+                            编号
+                        </div>
+                        <div class="col-xs-4">
+                            姓名
+                        </div>
+                        <div class="col-xs-4">
+                            操作
+                        </div>
+                    </div>
+                    <div class="tablebody" id="tableBody">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="changePwdModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">修改密码</h4>
+            </div>
+            <div class="modal-body" style="padding: 50px 100px;">
+                <form class="bs-example bs-example-form" role="form">
+                    <div class="input-group">
+                        <span class="input-group-addon">新密码</span>
+                        <input type="password" class="form-control" id="newPwd" placeholder="请输入新密码">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon">再输一次</span>
+                        <input type="password" class="form-control" id="newPwd2" placeholder="请输入新密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="changePwd">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</body>
+</html>
