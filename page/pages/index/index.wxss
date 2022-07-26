@@ -1,0 +1,32 @@
+/**index.wxss**/
+
+.header {
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+
+.section {
+  width: 400rpx;
+  padding: 50rpx 0;
+}
+
+.section text {
+  padding-left: 10rpx;
+  font-size: 36rpx;
+}
+
+input {
+  margin-top: 16rpx;
+  border: 1px solid #000;
+  padding-left: 10rpx;
+  height: 36px;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+}
+
+.submit {
+  width: 400rpx;
+  background: #fff;
+  color: #333;
+  font-size: 36rpx;
+}

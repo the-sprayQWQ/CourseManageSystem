@@ -1,0 +1,37 @@
+<!--pages/admin/admin.wxml-->
+<view class='container'>
+
+  <view class='tab-wrapper'>
+    <view id='firstTab' class='tab-first {{currentTab === 0 ? "tab-active":""}}' bindtap='switchTab'>课程管理</view>
+    <view id='secondTab' class='tab-second {{currentTab === 1 ? "tab-active" : ""}}' bindtap='switchTab'>用户管理</view>
+    <view id='seventhTab' class='tab-seventh {{currentTab === 6 ? "tab-active" : ""}}' bindtap='switchTab'>课程类型</view>
+    <view id='fifthTab' class='tab-fifth {{currentTab === 4 ? "tab-active" : ""}}' bindtap='switchTab'>管理员中心</view>
+  </view>
+
+  <view wx:if='{{currentTab===0}}' bindtap='addCourse'>
+    <image class='addIcon' src='../../images/add_icon.jpg'></image>
+  </view>
+  <view wx:if='{{currentTab===1}}' bindtap='addStudent'>
+    <image class='addIcon' src='../../images/add_icon.jpg'></image>
+  </view>
+
+  <view class='content-wrapper' wx:if='{{currentTab === 0}}'>
+    <mCourse id='mCourse' />
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 1}}'>
+    <mStudents id='mStudent' />
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 2}}'>
+    <addCourse/>
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 3}}'>
+    <addStudent/>
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 4}}'>
+    <mCenter id='mCenter' />
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 6}}'>
+    <mKind/>
+  </view>
+
+</view>

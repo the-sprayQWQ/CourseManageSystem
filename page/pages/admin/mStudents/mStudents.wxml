@@ -1,0 +1,24 @@
+<!--pages/admin/mStudents/mStudents.wxml-->
+<!-- 搜索框 -->
+<view class="searchBar">
+  <input placeholder="请输入学生学号或姓名" value="{{searchValue}}" bindinput="input_keywords" />
+  <button bindtap="clickSearch">
+    搜索
+  </button>
+</view>
+<!-- 学生列表 -->
+<view class='list'>
+  <view wx:for="{{stuList}}">
+    <view class="myCell" bindtap='clickCell' data-index='{{index}}'>
+      <view class="oneCell">
+        <view class="cellText"> 学号：{{item.uid}} </view>
+        <view class="cellText"> 姓名：{{item.uname}} </view>
+        <view class="cellText"> 分院：{{item.college}} </view>
+        <view class="cellText"> 班级：{{item.profession}}{{item.stuClass}}班 </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 学生详情 -->
+<dialog id="dialog" title="学生详情" confirmText="删除" confirmText2="修改" cancelText="取消" content="{{dialogContent}}" bind:cancel="handleCancelDialog" bind:confirm="handleConfirmDialog" bind:confirm2="handleConfirmDialog2">
+</dialog>

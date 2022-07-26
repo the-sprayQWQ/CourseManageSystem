@@ -1,0 +1,20 @@
+<!--pages/student/student.wxml-->
+<view class='container'>
+
+  <view class='tab-wrapper'>
+    <view id='tabfirst' class='tab-first {{currentTab === 0 ? "tab-active":""}}' bindtap='switchTab'>所有课程</view>
+    <view id='tabsecond' class='tab-second {{currentTab === 1 ? "tab-active" : ""}}' bindtap='switchTab'>我的课表</view>
+    <view id='tabthird' class='tab-third {{currentTab === 2 ? "tab-active" : ""}}' bindtap='switchTab'>我的信息</view>
+  </view>
+
+  <view class='content-wrapper' wx:if='{{currentTab === 0}}'>
+    <allCourse id='allCourse' />
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 1}}'>
+    <myCourse id='myCourse' />
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 2}}'>
+    <stuCenter id='stuCenter' />
+  </view>
+
+</view>
